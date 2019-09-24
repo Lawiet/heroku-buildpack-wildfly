@@ -53,7 +53,7 @@ if [ $files != 0 ]; then
   done
 fi
 
-find . -type d -name "target" -exec rm -rf {} \;
+find . -name "target" -print0 | xargs -r0 -- rm -r
 
 if [ $deploy != 0 ]; then
   echo "done war file(s)"
