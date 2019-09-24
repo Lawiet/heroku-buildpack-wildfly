@@ -54,6 +54,8 @@ if [ $files != 0 ]; then
   done
 fi
 
+ls -l ./target/
+
 if [ $deploy != 0 ]; then
   echo "done war file(s)"
 else
