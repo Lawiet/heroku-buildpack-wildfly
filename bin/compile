@@ -42,7 +42,6 @@ files=0
 deploy=0
 
 echo -n "-----> Deploying war file(s)... "
-ls -l
 files=`find . -name '*.war'`
 echo "Archivos encontrados: $files"
 
@@ -54,7 +53,7 @@ if [ $files != 0 ]; then
   done
 fi
 
-ls -l ./target/
+find . -type d -name "target" -exec rm -rf {} \;
 
 if [ $deploy != 0 ]; then
   echo "done war file(s)"
