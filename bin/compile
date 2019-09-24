@@ -42,6 +42,7 @@ files=0
 deploy=0
 
 echo -n "-----> Deploying war file(s)... "
+ls -l
 files=`find . -name '*.war'`
 echo "Archivos encontrados: $files"
 
